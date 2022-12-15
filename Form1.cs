@@ -30,6 +30,8 @@ namespace ServerControl
         private void Form1_Load(object sender, EventArgs e)
         {
             nginxProc = new NginxHandler(textBox1.Text, nginxStatus);
+            MainClasss main = new MainClasss();
+            main.attachForm(this);
         }
 
         private void pythonConnect_Click(object sender, EventArgs e)
@@ -78,6 +80,8 @@ namespace ServerControl
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = noExit;
+            if (ngrokProc.isExecuted)
+                ngrokProc.Hide();
             this.Hide();
         }
 
@@ -100,6 +104,21 @@ namespace ServerControl
         {
             noExit = false;
             this.Close();
+        }
+
+        private void textBox_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

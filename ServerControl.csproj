@@ -52,10 +52,26 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainClasss.cs" />
     <Compile Include="NginxHandler.cs" />
+    <Compile Include="PresetControlClass.cs" />
+    <Compile Include="TabControlClass.cs" />
     <Compile Include="ProcessHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tab\Preset\PythonTabClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tab\Steady\NginxTabClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tab\Steady\NgrokTabClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tab\TabBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tab\ConfigClass.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,5 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
